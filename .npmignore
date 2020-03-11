@@ -1,0 +1,12 @@
+node_modules
+.idea/
+
+# Source files
+src/
+
+# VSCode files
+.vscode/
+
+# Eslint files
+.eslintrc
+.eslintignore
