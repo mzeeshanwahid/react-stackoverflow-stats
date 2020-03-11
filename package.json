@@ -1,0 +1,57 @@
+{
+  "name": "stackoverflow-stats",
+  "version": "0.0.1",
+  "description": "React based components for stackoverflow developer stats",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "rm -rf ./lib && tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzeeshanwahid/stackoverflow-stats.git"
+  },
+  "keywords": [
+    "stackoverflow",
+    "stats",
+    "statistics",
+    "react",
+    "component"
+  ],
+  "author": "Muhammad Zeeshan <mzeeshanwa@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzeeshanwahid/stackoverflow-stats/issues"
+  },
+  "homepage": "https://github.com/mzeeshanwahid/stackoverflow-stats#readme",
+  "dependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "jest": "^25.1.0",
+    "typescript": "^3.8.3"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  }
+}
