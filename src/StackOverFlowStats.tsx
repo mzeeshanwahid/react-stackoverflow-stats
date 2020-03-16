@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {Wrapper} from "./components/Wrapper";
-import {Span} from "./components/Span";
+import { Wrapper } from "./components/Wrapper";
+import { Span } from "./components/Span";
 
 export interface StackOverFlowStatsProps {
   className?: string;
@@ -45,12 +45,17 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
     //   </>}
     // </div>
     <Wrapper>
-      <Span>{userData.display_name}</Span>
-      <Span>{userData.location}</Span>
-      <Span>{userData.reputation}</Span>
-      <Span>{userData.badge_counts.bronze}</Span>
-      <Span>{userData.badge_counts.silve}</Span>
-      <Span>{userData.badge_counts.gold}</Span>
+      {error !== "" && <Span>{error}</Span>}
+      {userData.length > 0 && (
+        <>
+          <Span>{userData.display_name}</Span>
+          <Span>{userData.location}</Span>
+          <Span>{userData.reputation}</Span>
+          <Span>{userData.badge_counts.bronze}</Span>
+          <Span>{userData.badge_counts.silve}</Span>
+          <Span>{userData.badge_counts.gold}</Span>
+        </>
+      )}
     </Wrapper>
   );
 };

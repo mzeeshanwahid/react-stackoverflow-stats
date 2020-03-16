@@ -39,8 +39,10 @@
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "styled-components": "^5.0.1"
+    "react-dom": "^16.13.0"
+  },
+  "peerDependencies": {
+    "styled-components": ">= 5"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
@@ -49,6 +51,7 @@
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
+    "styled-components": "^5.0.1",
     "typescript": "^3.8.3"
   },
   "directories": {
