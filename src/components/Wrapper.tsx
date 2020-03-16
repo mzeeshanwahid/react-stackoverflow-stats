@@ -1,6 +1,6 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 
-export const Wrapper = styled.section`
-    padding: 4rm;
-    background: papayawhip;
-`;
+// export const Wrapper = styled.section`
+//     padding: 4rm;
+//     background: papayawhip;
+// `;
