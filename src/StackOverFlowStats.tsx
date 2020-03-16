@@ -29,7 +29,6 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
 
   return (
     <section>
-      {/* {error && <span>{error}</span>} */}
       {userData ? (
         <>
           <span>{userData.display_name}</span>
