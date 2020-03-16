@@ -20,11 +20,9 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
       )
         .then(response => response.json())
         .then(data => {
-          if (data.length > 0) {
             // if (data.error_id) setError("Error: Provide a valid userId as prop");
             if (data.items) setUserData(data.items[0]);
             console.log("Dataa", data.items[0]);
-          }
         });
     }
   }, [userId]);
