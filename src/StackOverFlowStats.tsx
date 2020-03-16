@@ -12,7 +12,7 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
   userId
 }) => {
   //const [data, setData] = useState<any>([]);
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<string>(null);
   const [userData, setUserData] = useState<any>([]);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
     //   </>}
     // </div>
     <Wrapper>
-      {error !== "" && <Span>{error}</Span>}
+      {error && <Span>{error}</Span>}
       {userData.length > 0 && (
         <>
           <Span>{userData.display_name}</Span>
