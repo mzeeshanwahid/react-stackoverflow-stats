@@ -1,1 +1,2 @@
-export * from './TestComponent';
+export * from './StackOverFlowStats';
+export { default } from './StackOverFlowStats';
