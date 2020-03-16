@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
 
 export interface StackOverFlowStatsProps {
   className?: string;
@@ -10,7 +9,6 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
   className,
   userId
 }) => {
-  //const [data, setData] = useState<any>([]);
   const [error, setError] = useState<string>(null);
   const [userData, setUserData] = useState<any>([]);
 
@@ -29,20 +27,6 @@ export const StackOverFlowStats: React.FC<StackOverFlowStatsProps> = ({
   }, [userId]);
 
   return (
-    // <div
-    //   className={className}
-    //   style={{
-    //     display: "block",
-    //     background: "grey",
-    //     margin: "10px",
-    //     padding: "20px"
-    //   }}
-    // >
-    //   {error !== "" && <p>{error}</p>}
-    //   {userData.length > 0 && <>
-    //     <span style={{}}></span>
-    //   </>}
-    // </div>
     <section>
       {error && <span>{error}</span>}
       {userData.length > 0 && (

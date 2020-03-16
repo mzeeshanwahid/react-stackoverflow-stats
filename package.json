@@ -5,11 +5,15 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "src/style.css"
   ],
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "rm -rf ./lib && tsc",
+    "build": "rm -rf ./lib && tsc && npm run build:styles",
+    "build:styles": "npm run build:styles:dev && npm run build:styles:prod",
+    "build:styles:dev": "node-sass src/styles/index.scss lib/styles.css",
+    "build:styles:prod": "node-sass src/styles/index.scss lib/styles.min.css --output-style compressed",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -41,17 +45,14 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
-  "peerDependencies": {
-    "styled-components": ">= 5"
-  },
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "styled-components": "^5.0.1",
     "typescript": "^3.8.3"
   },
   "directories": {
