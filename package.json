@@ -35,7 +35,7 @@
     "url": "https://github.com/mzeeshanwahid/stackoverflow-stats/issues"
   },
   "homepage": "https://github.com/mzeeshanwahid/stackoverflow-stats#readme",
-  "peerDependencies": {
+  "dependencies": {
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "react": "^16.13.0",
