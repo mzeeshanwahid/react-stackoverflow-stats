@@ -8,7 +8,7 @@ const Card: React.FC<CardProps> = data => {
       <div className="additional">
         <div className="user-card">
           {/* <div className="level center">Level 13</div> */}
-          <img className="center" src={data.profile_image} />
+          <img src={data.profile_image} />
           <div className="points center">{data.reputation}</div>
         </div>
         <div className="more-info">
