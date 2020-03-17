@@ -1,6 +1,5 @@
 section {
   padding: 4rm;
-  background: papayawhip;
   display: inline-block; }
 
 img {
@@ -153,3 +152,11 @@ img {
   bottom: 1rem;
   right: 1rem;
   font-size: 0.9em; }
+
+span {
+  padding: 1rm;
+  background: skyblue; }
+
+span {
+  padding: 1rm;
+  background: skyblue; }
