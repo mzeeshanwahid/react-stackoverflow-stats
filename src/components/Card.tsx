@@ -47,11 +47,11 @@ const Card: React.FC<CardProps> = data => {
       </div>
       <div className="general">
         <h1>{data.display_name}</h1>
-        <p>Badges</p>
-        <span className="badge bronze">{data.badge_counts.bronze}</span>
-        <span className="badge silver">{data.badge_counts.silver}</span>
+        <span>Badges</span>
         <span className="badge gold">{data.badge_counts.gold}</span>
-        <p>Top Tags:</p>
+        <span className="badge silver">{data.badge_counts.silver}</span>
+        <span className="badge bronze">{data.badge_counts.bronze}</span>
+        <span>Top Tags:</span>
         {data.tags.map(tag => (
           <span className="tag">{tag}</span>
         ))}
