@@ -1,5 +1,6 @@
 import React from "react";
 import { CardProps } from "../interfaces/api";
+import Tags from "./Tags";
 
 const Card: React.FC<CardProps> = data => {
   return (
@@ -7,48 +8,46 @@ const Card: React.FC<CardProps> = data => {
       <div className="additional">
         <div className="user-card">
           {/* <div className="level center">Level 13</div> */}
-          <img src={data.profile_image} />
+          <img className="center" src={data.profile_image} />
           <div className="points center">{data.reputation}</div>
         </div>
         <div className="more-info">
           <h1>{data.display_name}</h1>
-          <div className="coords">
+          {/* <div className="coords">
             <span>Group Name</span>
             <span>Joined January 2019</span>
-          </div>
+          </div> */}
           <div className="coords">
-            <span>Position/Role</span>
-            <span>City, Country</span>
+            <span>{data.location}</span>
+            <span>{data.link}</span>
           </div>
           <div className="stats">
             <div>
-              <div className="title">Awards</div>
+              <div className="title">Today</div>
               <i className="fa fa-trophy"></i>
-              <div className="value">2</div>
+              <div className="value">{data.reputation_change_day}</div>
             </div>
             <div>
-              <div className="title">Matches</div>
+              <div className="title">Month</div>
               <i className="fa fa-gamepad"></i>
-              <div className="value">27</div>
+              <div className="value">{data.reputation_change_month}</div>
             </div>
             <div>
-              <div className="title">Pals</div>
+              <div className="title">Quarter</div>
               <i className="fa fa-group"></i>
-              <div className="value">123</div>
+              <div className="value">{data.reputation_change_quarter}</div>
             </div>
             <div>
-              <div className="title">Coffee</div>
+              <div className="title">Year</div>
               <i className="fa fa-coffee"></i>
-              <div className="value infinity">∞</div>
+              <div className="value">{data.reputation_change_year}</div>
             </div>
           </div>
         </div>
       </div>
       <div className="general">
         <h1>{data.display_name}</h1>
-        {data.tags.map(tag => (
-          <span>{tag}</span>
-        ))}
+        <Tags tags={data.tags} />
         <span className="more">Mouse over the card for more info</span>
       </div>
     </div>

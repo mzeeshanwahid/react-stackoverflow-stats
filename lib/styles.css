@@ -1,9 +1,7 @@
 section {
   padding: 4rm;
-  background: papayawhip; }
-
-span {
-  display: block; }
+  background: papayawhip;
+  display: inline-block; }
 
 img {
   width: 100px;
@@ -68,7 +66,7 @@ img {
   top: 15%;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 1.25em;
   font-weight: bold;
   background: rgba(0, 0, 0, 0.15);
   padding: 0.125rem 0.75rem;
