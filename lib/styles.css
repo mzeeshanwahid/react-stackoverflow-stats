@@ -45,6 +45,9 @@ img {
 .card.green .additional {
   background: linear-gradient(#92bca6, #a2ccb6); }
 
+.card.green .tags {
+  background: linear-gradient(#92bca6, #a2ccb6); }
+
 .card:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0; }
@@ -158,5 +161,25 @@ img {
   font-size: 0.9em; }
 
 .tag {
-  padding: 2rem;
-  background: skyblue; }
+  padding: 0.5rem;
+  background: linear-gradient(#de685e, #ee786e);
+  border-radius: 5%;
+  display: inline-flex;
+  margin-top: 0.5rem;
+  margin-right: 1rem; }
+
+.badge {
+  padding: 0.5rem;
+  border-radius: 5%;
+  display: inline-flex;
+  margin-top: 0.5rem;
+  margin-right: 1rem; }
+
+.bronze {
+  background: #cd7f32; }
+
+.silver {
+  background: #C0C0C0; }
+
+.gold {
+  background: #FFD700; }

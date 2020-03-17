@@ -1,6 +1,5 @@
 import React from "react";
 import { CardProps } from "../interfaces/api";
-import Tags from "./Tags";
 
 const Card: React.FC<CardProps> = data => {
   console.log("Data ...", data);
@@ -48,7 +47,14 @@ const Card: React.FC<CardProps> = data => {
       </div>
       <div className="general">
         <h1>{data.display_name}</h1>
-        {data.tags.map(tag => (<span className="tag">{tag}</span>))}
+        <p>Badges</p>
+        <span className="badge bronze">{data.badge_counts.bronze}</span>
+        <span className="badge silver">{data.badge_counts.silver}</span>
+        <span className="badge gold">{data.badge_counts.gold}</span>
+        <p>Top Tags:</p>
+        {data.tags.map(tag => (
+          <span className="tag">{tag}</span>
+        ))}
         <span className="more">Mouse over the card for more info</span>
       </div>
     </div>
