@@ -1,14 +1,23 @@
 section {
-    padding: 4rm;
-    background: papayawhip;
+  padding: 4rm;
+  background: papayawhip;
 }
 
 span {
-    display: block;
+  display: block;
 }
 
-img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
 }

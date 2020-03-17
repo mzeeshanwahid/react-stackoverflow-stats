@@ -1,3 +1,4 @@
-/// <reference types="react" />
-declare const Card: () => JSX.Element;
+import React from "react";
+import { CardProps } from "../interfaces/api";
+declare const Card: React.FC<CardProps>;
 export default Card;

@@ -1,15 +1,17 @@
 import React from "react";
+import { CardProps } from "../interfaces/api";
 
-const Card = () => {
+const Card: React.FC<CardProps> = data => {
   return (
     <div className="card">
       <div className="additional">
         <div className="user-card">
-          <div className="level center">Level 13</div>
-          <div className="points center">5,312 Points</div>
+          {/* <div className="level center">Level 13</div> */}
+          <img src={data.profile_image} />
+          <div className="points center">{data.reputation}</div>
         </div>
         <div className="more-info">
-          <h1>Jane Doe</h1>
+          <h1>{data.display_name}</h1>
           <div className="coords">
             <span>Group Name</span>
             <span>Joined January 2019</span>
@@ -43,12 +45,10 @@ const Card = () => {
         </div>
       </div>
       <div className="general">
-        <h1>Jane Doe</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-          volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut
-          pulvinar.
-        </p>
+        <h1>{data.display_name}</h1>
+        {data.tags.map(tag => (
+          <span>{tag}</span>
+        ))}
         <span className="more">Mouse over the card for more info</span>
       </div>
     </div>

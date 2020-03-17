@@ -24,3 +24,6 @@ export interface API_Response {
     profile_image: string;
     display_name: string;
 }
+export interface CardProps extends API_Response {
+    tags: string[];
+}
