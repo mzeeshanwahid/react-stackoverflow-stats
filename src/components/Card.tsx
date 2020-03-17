@@ -3,6 +3,7 @@ import { CardProps } from "../interfaces/api";
 import Tags from "./Tags";
 
 const Card: React.FC<CardProps> = data => {
+  console.log("Data ...", data);
   return (
     <div className="card">
       <div className="additional">
