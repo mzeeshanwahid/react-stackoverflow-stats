@@ -48,9 +48,7 @@ const Card: React.FC<CardProps> = data => {
       </div>
       <div className="general">
         <h1>{data.display_name}</h1>
-        {data.tags.map(tag => {
-          <span className="tag">{tag}</span>;
-        })}
+        {data.tags.map(tag => (<span className="tag">{tag}</span>))}
         <span className="more">Mouse over the card for more info</span>
       </div>
     </div>
